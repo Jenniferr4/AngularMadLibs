@@ -1,10 +1,37 @@
+#story{
+    font-size: 24px;
+}
 p{
-    font-size: 20px;
+    font-size: 18px;
 }
 li{
     font-size: 18px;
+    padding: 10px;
+    
 }
 input{
     border-radius: 5px;
     min-width: 240px;
+    background-color: rgb(236, 235, 234);
+    
+}
+button{
+    background-color: rgb(49, 120, 252);
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 50px;
+    border-color:blue;
+    border-width: 3px; 
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(79, 123, 245, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/* th{
+    border: solid 3px;
+} */
+td{
+    padding: 8px;
 }

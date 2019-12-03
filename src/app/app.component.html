@@ -1,12 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -352,68 +343,108 @@
   <!-- MAD LIB -->
   <br>
   <h1>Jennifer's MadLib</h1>
-  <ol>
-    <li>Favorite Person :  </li>
-    <input type="text" [(ngModel)]= "favPerson" />
+
+  <table>
+    <th></th>
+    <th></th>
     
-    <li>Pick a Number any Number :  </li>
-    <input type="text" [(ngModel)]= "number" />
+    <tr>
+      <td>
+        <p>A Large Place or Location :  </p>
+        <input type="text" placeholder="ex. planet, world, United States, sun.." [(ngModel)]= "largePlace" />
 
-    <li>Vehicle :  </li>
-    <input type="text" [(ngModel)]= "vehicle" />
+        <p>Person :  </p>
+        <input type="text" [(ngModel)]= "favPerson" />
+        
+        <p>Pick a Number any Number :  </p>
+        <input type="text" [(ngModel)]= "number" />
+    
+        <p>Vehicle (not a model) :  </p>
+        <input type="text" placeholder="ex. uber, bus, train" [(ngModel)]= "vehicle" />
+    
+        <p>Adjective : </p>
+        <input type="text" [(ngModel)]= "adjective" />
+    
+        <p>Adjective-2 :  </p>
+        <input type="text" [(ngModel)]= "adjective2" />
+    
+        <p>Verb with -ing :   </p>
+        <input type="text" [(ngModel)]= "verbing" />
+    
+        <p>Animal :  </p>
+        <input type="text" [(ngModel)]= "animal" />
 
-    <li>Adjective : </li>
-    <input type="text" [(ngModel)]= "adjective" />
-
-    <li>Adjective :  </li>
-    <input type="text" [(ngModel)]= "adjective2" />
-
-    <li>Verb with -ing :   </li>
-    <input type="text" [(ngModel)]= "verbing" />
-
-    <li>Animal :  </li>
-    <input type="text" [(ngModel)]= "animal" />
-
-    <li>Adjective :  </li>
-    <input type="text" [(ngModel)]= "adjective3" />
-
-    <li>Past Tense Verb :  </li>
-    <input type="text" [(ngModel)]= "past" />
-
-    <li>Adjective :   </li>
-    <input type="text" [(ngModel)]= "adjective4" />
-
-    <li>Noun :   </li>
-    <input type="text" [(ngModel)]= "noun" />
-
-    <li>Past Tense Verb :   </li>
-    <input type="text" [(ngModel)]= "past2" />
-
-    <li>Past Tense Verb :   </li>
-    <input type="text" [(ngModel)]= "past3" />
-
-    <li>Place :   </li>
-    <input type="text" [(ngModel)]= "place" />
-
-    <li>Verb :  </li>
-    <input type="text" [(ngModel)]= "verb" />
-
+        <p>BodyPart :  </p>
+        <input type="text" [(ngModel)]= "bodyPart" />
       
-  </ol>
+      </td>
 
-  <h2>Our Story begins....  </h2>
+      <td>
+        <p>Adjective-3 :  </p>
+        <input type="text" [(ngModel)]= "adjective3" />
+    
+        <p>Past Tense Verb :  </p>
+        <input type="text" [(ngModel)]= "past" />
+    
+        <p>Adjective-4 :   </p>
+        <input type="text" [(ngModel)]= "adjective4" />
+    
+        <p>Noun with a Capital letter :   </p>
+        <input type="text" [(ngModel)]= "noun" />
+    
+        <p>Past Tense Verb-2 :   </p>
+        <input type="text" [(ngModel)]= "past2" />
+    
+        <p>Verb :   </p>
+        <input type="text" [(ngModel)]= "verb" />
+    
+        <p>Place :   </p>
+        <input type="text" [(ngModel)]= "place" />
+    
+        <p>Verb-2 :  </p>
+        <input type="text" [(ngModel)]= "verb2" />
 
-  <p>
-    Last month, I went to Disney World with {{favPerson}} . <br>
-    We traveled for NUMBER decades by {{vehicle}}. <br>
+        <p>Closing with capital letter:  </p>
+        <input type="text" placeholder="ex. Sincerely, Best, Yours Truly " [(ngModel)]= "closing" />
+    </td>
+    </tr>
+  </table>
+  <br>
+
+  <div>Your Name (with a Capital Letter):  </div>
+  <input type="text" [(ngModel)]= "name" />
+
+  <div>Your Social Security and B-day:  </div>
+  <input type="password" placeholder="lol " />
+
+
+  <br> 
+    <button (click)="toggle()" id="bt">
+      {{buttonName}}
+  </button>
+  
+  <ng-container *ngIf="show">
+      <div style="margin: 0 auto;text-align: left;">
+          
+        <h1>Our Story begins....  </h1>
+
+  <p id="story">
+    Dear Diary, <br>
+    Last month, I went to Disney World with my favorite person in the whole wide <br>
+    {{largePlace}} {{favPerson}} . <br>
+    We traveled for {{number}} decades by {{vehicle}}. <br>
     Finally, we arrived and it was very {{adjective}}  .<br> 
     There were {{adjective2}} people {{verbing}} everywhere.<br> 
-    There were also people dressed up in {{animal}} costumes.<br>
+    There were also people dressed up in {{animal}} costumes, who would high five our {{bodyPart}}.<br>
     I wish it had been more {{adjective3}}  , but we {{past}}  <br>
     anyway. We also went on a(n) {{adjective4}}   ride<br>
     called Magic {{noun}} . {{favPerson}} nearly fell off a ride and <br>
-    had to be {{past}} . Later, we went to the hotel and <br>
-    {{past2}} . Next year, I want to go to {{past3}} ,<br>
+    had to be {{past}} . Later, we went to the hospital and almost <br>
+    {{past2}} . Next year, I want to go to {{place}} ,<br>
     where we can {{verb}} . <br><br>
-    THE END
+    {{closing}},<br><br>
+    {{name}}
     </p>
+
+      </div>
+  </ng-container>
