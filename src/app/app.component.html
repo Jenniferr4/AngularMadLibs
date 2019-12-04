@@ -332,7 +332,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span>Jennifer's {{ title }} app is running!</span>
 
     <svg id="rocket-smoke" alt="Rocket Ship Smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
@@ -341,33 +341,41 @@
   </div>
 
   <!-- MAD LIB -->
-  <br>
-  <h1>Jennifer's MadLib</h1>
 
   <table>
+    <th></th>
     <th></th>
     <th></th>
     
     <tr>
       <td>
-        <p>A Large Place or Location :  </p>
-        <input type="text" placeholder="ex. planet, world, United States, sun.." [(ngModel)]= "largePlace" />
+        <p>A Large Place or Location with Capital Letter:  </p>
+        <input type="text" placeholder="ex. planet, world, United States, sun.." 
+        [(ngModel)]= "largePlace" />
 
-        <p>Person :  </p>
+        <p>Person anyone at all :  </p>
         <input type="text" [(ngModel)]= "favPerson" />
         
         <p>Pick a Number any Number :  </p>
         <input type="text" [(ngModel)]= "number" />
     
         <p>Vehicle (not a model) :  </p>
-        <input type="text" placeholder="ex. uber, bus, train" [(ngModel)]= "vehicle" />
+        <input type="text" placeholder="ex. uber, bus, train, feet, scooter" 
+        [(ngModel)]= "vehicle" />
     
         <p>Adjective : </p>
         <input type="text" [(ngModel)]= "adjective" />
     
         <p>Adjective-2 :  </p>
         <input type="text" [(ngModel)]= "adjective2" />
-    
+
+        <p>Occupation :  </p>
+        <input type="text" placeholder="ex. doctor, teacher, president"
+        [(ngModel)]= "occupation" />
+      
+      </td>
+
+      <td>
         <p>Verb with -ing :   </p>
         <input type="text" [(ngModel)]= "verbing" />
     
@@ -376,41 +384,39 @@
 
         <p>BodyPart :  </p>
         <input type="text" [(ngModel)]= "bodyPart" />
-      
-      </td>
-
-      <td>
         <p>Adjective-3 :  </p>
         <input type="text" [(ngModel)]= "adjective3" />
     
-        <p>Past Tense Verb :  </p>
-        <input type="text" [(ngModel)]= "past" />
+        <p>Verb with -ing :  </p>
+        <input type="text" [(ngModel)]= "verbing2" />
     
         <p>Adjective-4 :   </p>
         <input type="text" [(ngModel)]= "adjective4" />
-    
+    </td>
+
+    <td>
         <p>Noun with a Capital letter :   </p>
         <input type="text" [(ngModel)]= "noun" />
     
         <p>Past Tense Verb-2 :   </p>
         <input type="text" [(ngModel)]= "past2" />
     
-        <p>Verb :   </p>
-        <input type="text" [(ngModel)]= "verb" />
+        <p>Past Tense Verb-3 :   </p>
+        <input type="text" [(ngModel)]= "past3" />
     
-        <p>Place :   </p>
+        <p>Place with Capital Letter:   </p>
         <input type="text" [(ngModel)]= "place" />
     
-        <p>Verb-2 :  </p>
-        <input type="text" [(ngModel)]= "verb2" />
-
-        <p>Closing with capital letter:  </p>
-        <input type="text" placeholder="ex. Sincerely, Best, Yours Truly " [(ngModel)]= "closing" />
+        <p>Verb :  </p>
+        <input type="text" [(ngModel)]= "verb" />
     </td>
     </tr>
   </table>
   <br>
 
+  <div>Closing with Capital letter:  </div>
+        <input type="text" placeholder="ex. Sincerely, Best, Yours Truly " 
+        [(ngModel)]= "closing" />
   <div>Your Name (with a Capital Letter):  </div>
   <input type="text" [(ngModel)]= "name" />
 
@@ -430,18 +436,22 @@
 
   <p id="story">
     Dear Diary, <br>
-    Last month, I went to Disney World with my favorite person in the whole wide <br>
-    {{largePlace}} {{favPerson}} . <br>
+    Last month, I went to Disney World with my <br>
+    favorite person in the whole wide <br>
+    {{largePlace}}, my lovely {{favPerson}} . <br>
     We traveled for {{number}} decades by {{vehicle}}. <br>
     Finally, we arrived and it was very {{adjective}}  .<br> 
-    There were {{adjective2}} people {{verbing}} everywhere.<br> 
-    There were also people dressed up in {{animal}} costumes, who would high five our {{bodyPart}}.<br>
-    I wish it had been more {{adjective3}}  , but we {{past}}  <br>
-    anyway. We also went on a(n) {{adjective4}}   ride<br>
-    called Magic {{noun}} . {{favPerson}} nearly fell off a ride and <br>
-    had to be {{past}} . Later, we went to the hospital and almost <br>
-    {{past2}} . Next year, I want to go to {{place}} ,<br>
-    where we can {{verb}} . <br><br>
+    There were {{adjective2}} {{occupation}} {{verbing}} everywhere.<br> 
+    There were also people dressed up in {{animal}} costumes, <br>
+    who would high five our {{bodyPart}}.<br>
+
+    I wish it had been more {{adjective3}}  , but we continued {{verbing2}}  <br>
+    anyway. We also went on a(n) {{adjective4}} ride<br>
+    called Magic {{noun}} . 
+    {{favPerson}} nearly fell off a ride and <br>
+    had to be {{past2}} on. Later, we went to the hospital and almost got<br>
+    {{past3}} . Next year, I want to go to {{place}} ,<br>
+    where we can {{verb}} everyone. <br><br>
     {{closing}},<br><br>
     {{name}}
     </p>

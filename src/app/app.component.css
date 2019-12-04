@@ -3,15 +3,16 @@
 }
 p{
     font-size: 18px;
+    padding-top: 20px;
 }
 li{
     font-size: 18px;
-    padding: 10px;
+    padding: 20px;
     
 }
 input{
     border-radius: 5px;
-    min-width: 240px;
+    min-width: 380px;
     background-color: rgb(236, 235, 234);
     
 }

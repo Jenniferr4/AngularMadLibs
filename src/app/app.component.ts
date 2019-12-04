@@ -13,17 +13,20 @@ export class AppComponent {
   vehicle: string;
   adjective: string;
   adjective2: string;
+  occupation: string;
   verbing: string;
   animal: string;
+  bodyPart: string;
+
   adjective3: string;
-  past: string;
+  verbing2: string;
   adjective4: string;
   noun: string;
+
   past2: string;
-  verb2: string;
+  past3: string
   place: string;
   verb: string;
-  bodyPart: string;
   closing: string;
   name: string;
 
